@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Checkbox, Flex, Heading, Text, VStack } from '@chakra-ui/react';
-import { FaTrophy, FaRocket, FaUnicorn } from '@chakra-ui/icons';
+import { FaTrophy, FaRocket, FaUnicorn } from 'react-icons/fa';
 
 const Index = () => {
   const [goals, setGoals] = useState([
