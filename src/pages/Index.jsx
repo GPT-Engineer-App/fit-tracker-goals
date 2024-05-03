@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box, Checkbox, Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import { FaTrophy, FaRocket, FaMagic } from 'react-icons/fa';
 
 const Index = () => {
   const [goals, setGoals] = useState([
@@ -35,7 +36,9 @@ const Index = () => {
         ))}
       </VStack>
       <Flex mt={10} justifyContent="center">
-        <Text fontSize="2xl">Total Points: {totalPoints}</Text>
+        <Text fontSize="2xl">
+          Total Points: {totalPoints} {totalPoints >= 100 ? <FaMagic /> : totalPoints >= 50 ? <FaRocket /> : totalPoints >= 20 ? <FaTrophy /> : null}
+        </Text>
       </Flex>
     </Box>
   );
